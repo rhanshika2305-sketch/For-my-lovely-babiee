@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy International Men's Day 💙</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 50%, #dbeafe 100%);
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+color: #1e293b;
+}
+.card {
+width: 100%;
+max-width: 430px;
+background: #ffffff;
+border-radius: 28px;
+box-shadow: 0 20px 50px rgba(30, 64, 175, 0.14);
+overflow: hidden;
+border: 2px solid #bfdbfe;
+}
+.top-bar {
+background: #eff6ff;
+padding: 12px 18px;
+display: flex;
+align-items: center;
+gap: 8px;
+border-bottom: 1px solid #dbeafe;
+}
+.dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+.dot.r { background: #f87171; }
+.dot.y { background: #fbbf24; }
+.dot.g { background: #34d399; }
+.screen {
+display: none;
+padding: 24px 20px 28px;
+text-align: center;
+animation: fadeIn 0.35s ease;
+}
+.screen.active { display: block; }
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(8px); }
+to { opacity: 1; transform: translateY(0); }
+}
+h1, h2, h3 { font-family: 'Fredoka', sans-serif; color: #1d4ed8; }
+h1 { font-size: 1.65rem; margin-bottom: 8px; }
+p.sub { font-size: 0.92rem; color: #475569; margin-bottom: 16px; }
+input[type="text"] {
+width: 100%;
+padding: 12px 14px;
+border-radius: 14px;
+border: 2px solid #93c5fd;
+font-size: 1rem;
+text-align: center;
+margin-bottom: 14px;
+outline: none;
+}
+input[type="text"]:focus { border-color: #2563eb; }
+.btn {
+background: linear-gradient(135deg, #2563eb, #1d4ed8);
+color: #fff;
+border: none;
+padding: 12px 22px;
+border-radius: 999px;
+font-size: 0.95rem;
+font-weight: 600;
+cursor: pointer;
+box-shadow: 0 8px 20px rgba(37, 99, 235, 0.28);
+transition: transform 0.15s ease;
+margin: 5px;
+}
+.btn:hover { transform: scale(1.03); }
+.btn.secondary {
+background: #e2e8f0;
+color: #1e293b;
+box-shadow: none;
+}
+.balloons {
+display: flex;
+justify-content: center;
+gap: 10px;
+flex-wrap: wrap;
+margin: 14px 0;
+}
+.balloon {
+width: 54px;
+height: 66px;
+border-radius: 50% 50% 50% 50% / 45% 45% 55% 55%;
+background: #3b82f6;
+color: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 700;
+cursor: pointer;
+user-select: none;
+transition: transform 0.2s, opacity 0.2s;
+}
+.balloon:nth-child(2) { background: #0ea5e9; }
+.balloon:nth-child(3) { background: #6366f1; }
+.balloon:nth-child(4) { background: #38bdf8; }
+.balloon:nth-child(5) { background: #2563eb; }
+.balloon.popped { opacity: 0.22; transform: scale(0.82); pointer-events: none; }
+.affirmation-box {
+background: #eff6ff;
+border: 1px dashed #60a5fa;
+border-radius: 16px;
+padding: 12px;
+min-height: 54px;
+margin: 12px 0 16px;
+font-size: 0.9rem;
+color: #1e3a8a;
+}
+.candles {
+display: flex;
+justify-content: center;
+gap: 16px;
+margin: 14px 0 18px;
+font-size: 1.8rem;
+cursor: pointer;
+}
+.meter-wrap {
+width: 100%;
+height: 18px;
+background: #dbeafe;
+border-radius: 999px;
+overflow: hidden;
+margin: 14px 0;
+}
+.meter-fill {
+height: 100%;
+width: 0%;
+background: linear-gradient(90deg, #38bdf8, #2563eb);
+transition: width 0.25s ease;
+}
+.tags {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 8px;
+margin: 14px 0 18px;
+}
+.tag {
+background: #eff6ff;
+color: #1d4ed8;
+border: 1px solid #bfdbfe;
+padding: 6px 12px;
+border-radius: 999px;
+font-size: 0.82rem;
+font-weight: 500;
+}
+.cert {
+background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);
+border: 2px solid #2563eb;
+border-radius: 20px;
+padding: 20px 16px;
+margin: 14px 0;
+}
+.cert-badge {
+display: inline-block;
+background: #2563eb;
+color: #fff;
+font-size: 0.72rem;
+font-weight: 700;
+padding: 4px 12px;
+border-radius: 999px;
+letter-spacing: 1px;
+margin-bottom: 8px;
+}
+.cert-name {
+font-family: 'Fredoka', sans-serif;
+font-size: 1.5rem;
+color: #0f172a;
+margin: 8px 0;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="top-bar">
+<span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+</div>
+
+<!-- Step 1: Name Setup -->
+<div class="screen active" id="s1">
+<h1>Special Men's Day Card 💙</h1>
+<p class="sub">19 Nov · Enter their name to personalize</p>
+<input type="text" id="nameInput" placeholder="Enter name (e.g. Aarav)" value="Aarav" />
+<button class="btn" onclick="startCard()">Start Surprise ✨</button>
+</div>
+
+<!-- Step 2: Balloons & Candles -->
+<div class="screen" id="s2">
+<h2>Happy Men's Day!</h2>
+<p class="sub">For <b id="dName1">you</b> · Pop all 5 balloons 🎈</p>
+<div class="balloons" id="balloonBox"></div>
+<div class="affirmation-box" id="affBox">Tap a balloon to reveal a sweet note 💙</div>
+<p class="sub" style="margin-bottom:6px;">Touch each candle to blow it out 🕯️</p>
+<div class="candles" id="candleBox"></div>
+<button class="btn" onclick="goScreen('s3')">Next 💙</button>
+</div>
+
+<!-- Step 3: Appreciation Meter -->
+<div class="screen" id="s3">
+<h2>Appreciation Meter</h2>
+<p class="sub">Hey <b id="dName2">you</b>, tap to fill up to 100%!</p>
+<div style="font-size:2.4rem;" id="moodEmoji">😐</div>
+<div id="meterPct" style="font-weight:700; margin-top:6px;">0%</div>
+<div class="meter-wrap"><div class="meter-fill" id="meterBar"></div></div>
+<button class="btn" onclick="boostMeter()">Boost Appreciation 💪</button>
+<button class="btn secondary" id="nextAfterMeter" style="display:none;" onclick="goScreen('s4')">Continue →</button>
+</div>
+
+<!-- Step 4: Fun Prompt -->
+<div class="screen" id="s4">
+<div style="font-size:3rem; margin-bottom:8px;">🙈</div>
+<h2>Do you wanna see it?</h2>
+<p class="sub">A special surprise is waiting for <b id="dName3">you</b>...</p>
+<button class="btn" onclick="goScreen('s6')">Yes, show me! 💙</button>
+<button class="btn secondary" onclick="goScreen('s5')">No, thanks</button>
+</div>
+
+<!-- Step 5: How Dare You -->
+<div class="screen" id="s5">
+<div style="font-size:3rem; margin-bottom:8px;">😤</div>
+<h2 style="color:#dc2626;">HOW DARE YOU!?</h2>
+<p class="sub">Okay okay, don't be shy... let's try that again 🥺</p>
+<button class="btn" onclick="goScreen('s4')">Go Back</button>
+</div>
+
+<!-- Step 6: Badges & Certificate -->
+<div class="screen" id="s6">
+<h2>You're Amazing, <span id="dName4"></span>! 💙</h2>
+<div class="tags">
+<span class="tag">Hero 🦸</span>
+<span class="tag">Strength 💪</span>
+<span class="tag">Role Model 🌟</span>
+<span class="tag">Best Friend 🤝</span>
+<span class="tag">My Rock 💙</span>
+</div>
+<div class="cert">
+<div class="cert-badge">★ HERO ★</div>
+<h3>CERTIFICATE OF APPRECIATION</h3>
+<p style="font-size:0.78rem; color:#64748b; margin-top:4px;">Presented proudly to</p>
+<div class="cert-name" id="certName">Aarav</div>
+<p style="font-size:0.86rem; color:#334155; line-height:1.45;">
+Happy International Men's Day! Thank you for your strength, kindness, and everything you do. You truly matter. 💙
+</p>
+</div>
+<button class="btn" onclick="goScreen('s1')">Create Another ↺</button>
+</div>
+</div>
+
+<script>
+const notes = [
+"Your quiet strength inspires everyone around you 💪",
+"Thank you for always being a safe and steady support 💙",
+"Your kindness makes tough days feel so much lighter ✨",
+"A true role model with a heart of gold 🌟",
+"Today and every day, you are deeply appreciated 🙌"
+ ];
+let meter = 0;
+let personName = "Aarav";
+
+function goScreen(id) {
+document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+
+function startCard() {
+const val = document.getElementById('nameInput').value.trim();
+personName = val || "Friend";
+['dName1','dName2','dName3','dName4','certName'].forEach(id => {
+document.getElementById(id).textContent = personName;
+});
+setupBalloonsAndCandles();
+meter = 0;
+updateMeterUI();
+goScreen('s2');
+}
+
+function setupBalloonsAndCandles() {
+const bBox = document.getElementById('balloonBox');
+const cBox = document.getElementById('candleBox');
+document.getElementById('affBox').textContent = "Tap a balloon to reveal a sweet note 💙";
+bBox.innerHTML = "";
+cBox.innerHTML = "";
+
+notes.forEach((msg, i) => {
+const b = document.createElement('div');
+b.className = 'balloon';
+b.textContent = 🎈${i + 1};
+b.onclick = () => {
+b.classList.add('popped');
+document.getElementById('affBox').textContent = msg;
+};
+bBox.appendChild(b);
+});
+
+for (let i = 0; i < 3; i++) {
+const c = document.createElement('span');
+c.textContent = '🕯️';
+c.title = 'Tap to blow out';
+c.onclick = () => {
+c.textContent = '💨';
+c.style.opacity = '0.5';
+};
+cBox.appendChild(c);
+}
+}
+
+function boostMeter() {
+if (meter < 100) {
+meter = Math.min(100, meter + 25);
+updateMeterUI();
+}
+}
+
+function updateMeterUI() {
+document.getElementById('meterPct').textContent = meter + "%";
+document.getElementById('meterBar').style.width = meter + "%";
+const emoji = document.getElementById('moodEmoji');
+if (meter === 0) emoji.textContent = "😐";
+else if (meter < 50) emoji.textContent = "🙂";
+else if (meter < 100) emoji.textContent = "🤩";
+else {
+emoji.textContent = "🥳";
+document.getElementById('nextAfterMeter').style.display = "inline-block";
+}
+}
+</script>
+</body>
+</html>
